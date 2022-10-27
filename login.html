@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+
+<body>
+    <center>
+        <h1>Please Enter your login details</h1>
+        Your Name:
+        <input type="text" placeholder="eg:abc" id="name">
+        <br><br>
+        Your phone number:
+        <input type="number" placeholder="xxxxxxxxxx" maxlength="10" id="number">
+        <br><br>
+        Your email-id:
+        <input type="email" placeholder="eg:abc.xyz@gmail.com" id="email">
+        <br><br>
+        Password:
+        <input type="password" placeholder="xxxxxxxx" id="pass">
+        <br><br>
+        <button type="button" id="submit" onclick="return validate()">Submit</button>
+        <br><br>
+        <a href="index.html">Go back to home page</a>
+        <br><br>
+        <script>
+            function validate() {
+                var Name = document.getElementById("name");
+                var Number = document.getElementById("number");
+                var Email = document.getElementById("email");
+                var Password = document.getElementById("pass")
+
+                if (Name.value.trim() == "") {
+                    alert("Name cannot be blank")
+                    return false;
+                }
+                else if (Number.value.trim() == "") {
+                    alert("Number cannot be blank")
+                    return false;
+                }
+                else if (Email.value.trim() == "") {
+                    alert("Email cannot be blank")
+                    return false;
+                }
+                else if (Password.value.trim() == "") {
+                    alert("Password cannot be blank")
+                    return false;
+                }
+                else
+                    alert("Thankyou for submitting your details!!")
+            }
+        </script>
+</body>
+
+</html>
